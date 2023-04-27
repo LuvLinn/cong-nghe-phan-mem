@@ -1,2 +1,2 @@
 # cong-nghe-phan-mem
-fnvnz
+task 14
