@@ -1,21 +1,9 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 18, 2022 lúc 06:41 PM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.1.2
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Cơ sở dữ liệu: `company_management`
@@ -253,9 +241,6 @@ INSERT INTO `user` (`UserID`, `FullName`, `Gender`, `Role`, `Salary`, `Email`, `
 ('US020', 'Võ Thuận Thành', 'Nam', 'Nhân viên', 14500000, 'vothuanthanh@gmail.com', '1995-06-18', '0110776553', NULL, 'QHQT001'),
 ('US021', 'Lê Thị Bưởi', 'Nữ', 'Nhân viên', 12300000, 'lethibuoi@gmail.com', '1999-11-19', '0925188492', NULL, 'IT001');
 
---
--- Các ràng buộc cho các bảng đã đổ
---
 
 --
 -- Các ràng buộc cho bảng `absence`
@@ -301,7 +286,3 @@ ALTER TABLE `task_conversation`
 ALTER TABLE `user`
   ADD CONSTRAINT `FK_User_Department` FOREIGN KEY (`DepartmentID`) REFERENCES `department` (`DepartmentID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
